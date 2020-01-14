@@ -1,16 +1,40 @@
 {
-    "restaurante" : [
-        {
-            "precio" : "200",
-            "nombre" : "Lomo Fino",
-            "categoria" : "Asados",
-            "id" : 1
-        },
-        {
-            "precio" : "250",
-            "nombre" : "Punta de anca gorda",
-            "categoria" : "Asados",
-            "id" : 2
-        }
-    ]
+  "restaurante": [
+    {
+      "precio": "200",
+      "nombre": "Lomo Fino",
+      "categoria": "Asados",
+      "id": 1
+    },
+    {
+      "precio": "250",
+      "nombre": "Punta de anca gorda",
+      "categoria": "Asados",
+      "id": 2
+    },
+    {
+      "nombre": "Ensalada de calabaza",
+      "precio": "80",
+      "categoria": "ensalada",
+      "id": 3
+    },
+    {
+      "nombre": "Chantilli",
+      "precio": "50",
+      "categoria": "postre",
+      "id": 4
+    },
+    {
+      "nombre": "Postre de chocolate",
+      "precio": "35",
+      "categoria": "postre",
+      "id": 5
+    },
+    {
+      "nombre": "Coca Cola",
+      "precio": "10",
+      "categoria": "bebida",
+      "id": 6
+    }
+  ]
 }

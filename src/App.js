@@ -12,17 +12,26 @@ function App() {
 
   // State
   const [ productos, setProductos ] = useState([]);
+  const [ recargarProductos, setRecargarProductos ] = useState(true);
 
   useEffect(
     () => {
-        const consultarApi = async () => {
+      if(recargarProductos) {
+          const consultarApi = async () => {
           // Consulta api de json-server
           const resultado = await axios.get('http://localhost:4000/restaurante');
 
           setProductos(resultado.data);
         }
+
         consultarApi();
-    }, []
+          
+      }
+      
+
+      // Recarga delos productos a false
+      setRecargarProductos(false);
+    }, [recargarProductos]
   );
 
   return (
@@ -32,7 +41,12 @@ function App() {
         <Header />
         <main className="container mt-5">
           <Switch>
-            <Route exact path="/productos/nuevo" component={ NuevoProducto } />
+            <Route exact path="/productos/nuevo" 
+                   render={ () => (
+                      <NuevoProducto
+                        setRecargarProductos={setRecargarProductos}
+                      />
+                   ) } />
             <Route exact path="/productos" 
                    render={ () => (
                       <Productos 
