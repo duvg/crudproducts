@@ -2,14 +2,14 @@
   "restaurante": [
     {
       "precio": "200",
-      "nombre": "Lomo Fino",
-      "categoria": "Asados",
+      "nombre": "Lomo Fino 200 gm",
+      "categoria": "asados",
       "id": 1
     },
     {
-      "precio": "250",
-      "nombre": "Punta de anca gorda",
-      "categoria": "Asados",
+      "precio": "270",
+      "nombre": "Punta de anca gorda 300 gm",
+      "categoria": "asados",
       "id": 2
     },
     {
