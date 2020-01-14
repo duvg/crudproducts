@@ -1,12 +1,6 @@
 {
   "restaurante": [
     {
-      "precio": "200",
-      "nombre": "Lomo Fino 200 gm",
-      "categoria": "asados",
-      "id": 1
-    },
-    {
       "precio": "270",
       "nombre": "Punta de anca gorda 300 gm",
       "categoria": "asados",
@@ -23,18 +17,6 @@
       "precio": "50",
       "categoria": "postre",
       "id": 4
-    },
-    {
-      "nombre": "Postre de chocolate",
-      "precio": "35",
-      "categoria": "postre",
-      "id": 5
-    },
-    {
-      "nombre": "Coca Cola",
-      "precio": "10",
-      "categoria": "bebida",
-      "id": 6
     }
   ]
 }

@@ -51,6 +51,7 @@ function App() {
                    render={ () => (
                       <Productos 
                         productos={productos}
+                        setRecargarProductos={setRecargarProductos}
                       />
                    ) }/>
             <Route exact path="/productos/:id" component={ Producto } />
