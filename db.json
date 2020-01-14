@@ -1,0 +1,16 @@
+{
+    "restaurante" : [
+        {
+            "precioPlatillo" : "200",
+            "nombre" : "Lomo Fino",
+            "categoria" : "Asados",
+            "id" : 1
+        },
+        {
+            "precioPlatillo" : "250",
+            "nombre" : "Punta de anca gorda",
+            "categoria" : "Asados",
+            "id" : 2
+        }
+    ]
+}
