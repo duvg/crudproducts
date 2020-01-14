@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import axios from 'axios';
 
 import Header from './components/common/Header';
 import Producto from './components/Producto';
@@ -8,6 +9,22 @@ import NuevoProducto from './components/NuevoProducto';
 import EditarProducto from './components/EditarProducto';
 
 function App() {
+
+  // State
+  const [ productos, setProductos ] = useState([]);
+
+  useEffect(
+    () => {
+        const consultarApi = async () => {
+          // Consulta api de json-server
+          const resultado = await axios.get('http://localhost:4000/restaurante');
+
+          setProductos(resultado.data);
+        }
+        consultarApi();
+    }, []
+  );
+
   return (
     <div className="App">
       <Router>
@@ -16,7 +33,12 @@ function App() {
         <main className="container mt-5">
           <Switch>
             <Route exact path="/productos/nuevo" component={ NuevoProducto } />
-            <Route exact path="/productos" component={ Productos } />
+            <Route exact path="/productos" 
+                   render={ () => (
+                      <Productos 
+                        productos={productos}
+                      />
+                   ) }/>
             <Route exact path="/productos/:id" component={ Producto } />
             <Route exact path="/productos/editar/:id" component={ EditarProducto } />
           </Switch>
